@@ -44,7 +44,7 @@ public class Principal {
 		int n = sc.nextInt();
 		
 		for(int i = 1; i <= n; i++) {
-			System.out.println("Enter contract # " + i + "data: ");
+			System.out.println("Enter contract #" + i + " data: ");
 			System.out.print("Date (DD/MM/YYYY): ");
 			Date contractDate = sd.parse(sc.next());
 			System.out.print("Value per hour: ");
