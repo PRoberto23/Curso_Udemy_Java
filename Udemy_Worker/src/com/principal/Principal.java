@@ -25,7 +25,7 @@ public class Principal {
 		System.out.print("Enter worker data: ");
 		System.out.print("Name: ");
 		String workerName = sc.nextLine();
-		System.out.print("Level: ");
+		System.out.print("Level (JUNIOR/MID_LEVEL/SENIOR) : ");
 		String workerLevel = sc.nextLine();
 		System.out.print("Base Salary: ");
 		double baseSalary = sc.nextDouble();
@@ -44,12 +44,12 @@ public class Principal {
 		int n = sc.nextInt();
 		
 		for(int i = 1; i <= n; i++) {
-			System.out.println("Enter contract #" + i + "data: ");
+			System.out.println("Enter contract # " + i + "data: ");
 			System.out.print("Date (DD/MM/YYYY): ");
 			Date contractDate = sd.parse(sc.next());
 			System.out.print("Value per hour: ");
 			double valuePerHour = sc.nextDouble();
-			System.out.print("Duration (hours)");
+			System.out.print("Duration (hours): ");
 			int hours = sc.nextInt();
 			
 			HourContract contract = new HourContract(contractDate, valuePerHour, hours);
