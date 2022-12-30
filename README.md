@@ -1,2 +1,4 @@
 # Curso_Udemy_Java
- Repositório destinado a armazenar os códigos dos exercícios abordados no decorrer do curso
+ Neste repositório irei armazenando os códigos dos exercícios que serão repassados no decorrer do curso.
+ 
+ Estou usando a língua inglesa para facilitar na associação e correção com as videoaulas e para aumentar minha familiaridade com a língua
