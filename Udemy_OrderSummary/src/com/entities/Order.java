@@ -55,8 +55,22 @@ public class Order {
 	public void removeItem(OrderItem item) {
 		orderItem.remove(item);
 	}
-
+	
 	/*
 	 * public double total(){ }
 	 */
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Horário de realização do pedido: " + moment + "/n");
+		sb.append("Status do pedido: " + status + "/n");
+		sb.append("Client: " + client.toString() + "/n");
+		sb.append("Itens do pedido:/n ");
+		
+		
+		
+	}
+
+	
 }
