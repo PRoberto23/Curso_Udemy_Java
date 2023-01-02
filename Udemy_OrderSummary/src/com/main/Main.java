@@ -1,5 +1,7 @@
 package com.main;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Scanner;
@@ -12,9 +14,9 @@ import com.entities.enums.OrderStatus;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
-		DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -24,7 +26,7 @@ public class Main {
 		System.out.print("Email: ");
 		String email = sc.next();
 		System.out.print("Data de aniversário (DD/MM/YYYY): ");
-		Date birthDate = (Date) df.parse(sc.next());
+		Date birthDate = sdf.parse(sc.next());
 		
 		Client client = new Client(name, email, birthDate);
 		
@@ -59,7 +61,8 @@ public class Main {
 		}
 		
 		System.out.println();
-		System.out.println("Sumário do pedido: ");
+		System.out.println("Sumário: ");
+		System.out.println(order);
 		
 	}
 

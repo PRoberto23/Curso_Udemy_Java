@@ -71,13 +71,13 @@ public class Order {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Order moment: ");
+		sb.append("Data do pedido: ");
 		sb.append(sdf.format(moment) + "\n");
-		sb.append("Order status: ");
+		sb.append("Status do pedido: ");
 		sb.append(status + "\n");
-		sb.append("Client: ");
+		sb.append("Cliente: ");
 		sb.append(client + "\n");
-		sb.append("Order items:\n");
+		sb.append("Itens do pedido:\n");
 		for (OrderItem item : orderItem) {
 			sb.append(item + "\n");
 		}

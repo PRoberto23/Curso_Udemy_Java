@@ -45,7 +45,7 @@ public class OrderItem {
 		return getProduct().getName()
 				+ ", $"
 				+ String.format("%.2f", price)
-				+ ", Quantity: "
+				+ ", Quantidade: "
 				+ quantity
 				+ ", Subtotal: $"
 				+ String.format("%.2f", subTotal());
