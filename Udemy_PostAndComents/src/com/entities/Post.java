@@ -10,11 +10,11 @@ public class Post {
 	private String title;
 	private String content;
 	private Integer likes;
+	
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
 	private List<Comments> comments = new ArrayList<>();
 
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-	
 	public Post() {
 	}
 
@@ -57,7 +57,7 @@ public class Post {
 		this.likes = likes;
 	}
 
-	public List<Comments> getComment() {
+	public List<Comments> getComments() {
 		return comments;
 	}
 
@@ -68,20 +68,21 @@ public class Post {
 	public void removeComment(Comments comment) {
 		comments.remove(comment);
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(title + "/n");
-		sb.append(likes);
-		sb.append(" Likes - ");
-		sb.append(sdf.format(moment) + "/n");
-		sb.append(content + "/n");
-		sb.append("Comments:/n");
+		sb.append(title + "\n");
+		sb.append(likes + " Likes - ");
+		sb.append(sdf.format(moment));
+		sb.append("\n" + content + "\n");
+		sb.append("Comments:\n");
 		for(Comments c : comments) {
-			sb.append(c.getComments());
+			sb.append(c.getText() + "\n");
 		}
+
 		return sb.toString();
 	}
-
+	
+	
 }

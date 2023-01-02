@@ -1,22 +1,21 @@
 package com.entities;
 
 public class Comments {
-	private String comments;
+	private String text;
 	
 	public Comments() {
 	}
 
-	public Comments(String comments) {
-		super();
-		this.comments = comments;
+	public Comments(String text) {
+		this.text = text;
 	}
 
-	public String getComments() {
-		return comments;
+	public String getText() {
+		return text;
 	}
 
-	public void setComments(String comments) {
-		this.comments = comments;
+	public void setText(String text) {
+		this.text = text;
 	}
 	
 	
